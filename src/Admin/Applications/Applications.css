@@ -1,0 +1,10 @@
+.applications_table {
+  width: 95%;
+  margin: auto;
+  margin-top: 50px !important;
+}
+
+.tableCell {
+  padding-top: 20px;
+  text-decoration: none;
+}

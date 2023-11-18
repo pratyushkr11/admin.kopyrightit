@@ -1,0 +1,95 @@
+.admin-form-modal {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0 0 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.admin_modal__form input,
+.admin_modal__form3 input {
+  width: 500px;
+  height: 40px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 20px;
+}
+
+.admin_modal__radio input {
+  width: 80px;
+}
+
+.admin_modal__form,
+.admin_modal__form3,
+.admin_modal__radio {
+  width: 85%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0px;
+}
+
+.admin_modal__radio {
+  width: 75%;
+}
+
+.admin_modal__form label,
+.admin_modal__form3 label,
+.admin_modal__radio label {
+  font-size: 18px;
+}
+
+.admin_modal__form,
+.admin_modal__form3,
+.admin_modal__radio {
+  padding-left: 120px;
+}
+
+.modal-radio-btn {
+  padding: 10px 0 0 120px;
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-modal-yes__container,
+.admin-modal-no__container {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.location_data,
+.location_data2 {
+  width: 80%;
+  margin-left: 120px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location_data label,
+.location_data2 label {
+  font-size: 20px;
+  padding-right: 50px;
+}
+
+.location_data input,
+.location_data2 input {
+  width: 280px;
+  height: 40px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 20px;
+}
+
+.location_data2 {
+  padding: 50px 0;
+}
+
+.btn-closeModal {
+  display: flex;
+  justify-content: center;
+}

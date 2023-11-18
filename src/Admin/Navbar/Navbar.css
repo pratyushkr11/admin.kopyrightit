@@ -1,0 +1,83 @@
+/* Navbar.css */
+
+.navbar {
+  height: 50px;
+  border-bottom: 0.5px solid lightgrey;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #000;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border: 0.5px solid lightgrey;
+  border-radius: 10px;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.counter {
+  width: 13px;
+  height: 13px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: -1;
+  right: 0;
+}
+
+.date-picker {
+  display: flex;
+  gap: 10px;
+}
+
+/* Adjust input field styles */
+.react-datepicker-wrapper {
+  display: flex;
+  padding-left: 10px;
+}
+
+.react-datepicker__input-container {
+  display: flex;
+  border: 1px solid;
+  border-radius: 6px;
+}
+
+.react-datepicker__input-container input {
+  width: 150px;
+  padding-left: 10px;
+}
