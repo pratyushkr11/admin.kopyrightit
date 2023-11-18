@@ -72,29 +72,29 @@ const Applications = () => {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
 
-    // Function to filter forms based on date range
-    const filterFormsByDate = (start, end) => {
-      if (start && end) {
-        const filteredForms = forms.filter(
-          (formData) =>
-            new Date(formData.date) >= start && new Date(formData.date) <= end
-        );
-        return filteredForms;
-      }
-      return forms;
-    };
-    
+  // Function to filter forms based on date range
+  const filterFormsByDate = (start, end) => {
+    if (start && end) {
+      const filteredForms = forms.filter(
+        (formData) =>
+          new Date(formData.date) >= start && new Date(formData.date) <= end
+      );
+      return filteredForms;
+    }
+    return forms;
+  };
+
 
   useEffect(() => {
     try {
       axios
-        .get(`http://localhost:3001/getforms`)
+        .get(`https://admin-backend-w47n.onrender.com/getforms`)
         .then((response) => {
           if (Array.isArray(response.data)) {
             setForms(response.data);
             // if (response.data.length > 0) {
-                selectedFormRef.current = response.data[0];
-                console.log(selectedFormRef.current)
+            selectedFormRef.current = response.data[0];
+            console.log(selectedFormRef.current)
 
             //   }
           } else {
@@ -127,7 +127,7 @@ const Applications = () => {
       <div className="home">
         <SideNav />
         <div className="homeContainer">
-        <Navbar setStartDate={setStartDate} setEndDate={setEndDate} />
+          <Navbar setStartDate={setStartDate} setEndDate={setEndDate} />
           <div className="applications_table">
             <TableContainer
               component={Paper}
@@ -195,7 +195,7 @@ const Applications = () => {
           </div>
         </div>
       </div>
-      
+
     </>
   );
 };

@@ -9,7 +9,7 @@ export const FormProvider = ({ children }) => {
   const [formData, setFormData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getforms')
+    axios.get('https://admin-backend-w47n.onrender.com/getforms')
       .then((response) => setFormData(response.data))
       .catch((error) => console.error('Error fetching form data:', error));
   }, []);

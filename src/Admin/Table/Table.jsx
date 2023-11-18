@@ -20,7 +20,7 @@ const List = () => {
   useEffect(() => {
     try {
       axios
-        .get(`http://localhost:3001/getforms`)
+        .get(`https://admin-backend-w47n.onrender.com/getforms`)
         .then((response) => {
           if (Array.isArray(response.data)) {
             setForms(response.data);

@@ -26,7 +26,7 @@ const FormModal = (props) => {
 
   const updateDairyNo = async (formId, dairyNo) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/updateDairyNo', {
+      const response = await axios.post('https://admin-backend-w47n.onrender.com/api/updateDairyNo', {
         formId: formId,
         dairyNo: dairyNo,
       });
@@ -57,9 +57,9 @@ const FormModal = (props) => {
   };
 
   const updateStatus = async () => {
-    const formId=forms._id
+    const formId = forms._id
     try {
-      const response = await axios.post('http://localhost:3001/api/updateStatus', {
+      const response = await axios.post('https://admin-backend-w47n.onrender.com/api/updateStatus', {
         formId: formId,
         status: status,
       });
@@ -80,7 +80,7 @@ const FormModal = (props) => {
 
   const openOrDownload = async (key, type) => {
     try {
-      const response = await axios.get(`http://localhost:3001/getURL`, {
+      const response = await axios.get(`https://admin-backend-w47n.onrender.com/getURL`, {
         params: { key, type }, // Pass key and type as query parameters
       });
 
@@ -105,39 +105,39 @@ const FormModal = (props) => {
           <u>Form Details</u>
         </h2>
         <div className="admin-form-modal">
-        <div className="admin_modal__form">
-        <label htmlFor="option">
-          <b>Dairy No: </b>
-        </label>
-        <input
-          placeholder="Enter Dairy No"
-          type="text"
-          id="dairy-no"
-          value={dairyNo}
-          onChange={(e) => setDairyNo(e.target.value)}
-        />
-        <button onClick={enterDairyno}>Submit</button>
-        <ToastContainer />
-      </div>
-      <div className="admin_modal__form">
-      <label htmlFor="status">
-          <b>Status: </b>
-        </label>
-        <select
-          id="status"
-          value={status}
-          onChange={(e) => setStatus(e.target.value)}
-        >
-          <option value="">Select Status</option>
-          <option value="Pending">Pending</option>
-          <option value="Application Submitted">Application Submitted</option>
-          <option value="Approved">Approved</option>
-          <option value="Completed">Completed</option>
-        </select>
+          <div className="admin_modal__form">
+            <label htmlFor="option">
+              <b>Dairy No: </b>
+            </label>
+            <input
+              placeholder="Enter Dairy No"
+              type="text"
+              id="dairy-no"
+              value={dairyNo}
+              onChange={(e) => setDairyNo(e.target.value)}
+            />
+            <button onClick={enterDairyno}>Submit</button>
+            <ToastContainer />
+          </div>
+          <div className="admin_modal__form">
+            <label htmlFor="status">
+              <b>Status: </b>
+            </label>
+            <select
+              id="status"
+              value={status}
+              onChange={(e) => setStatus(e.target.value)}
+            >
+              <option value="">Select Status</option>
+              <option value="Pending">Pending</option>
+              <option value="Application Submitted">Application Submitted</option>
+              <option value="Approved">Approved</option>
+              <option value="Completed">Completed</option>
+            </select>
 
-        <button onClick={updateStatus}>Update</button>
-        <ToastContainer />
-      </div>
+            <button onClick={updateStatus}>Update</button>
+            <ToastContainer />
+          </div>
           <div className="admin_modal__form">
             <label htmlFor="option">
               <b>What type of copyright are you registering? </b>
